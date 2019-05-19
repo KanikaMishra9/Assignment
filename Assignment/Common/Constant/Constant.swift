@@ -18,11 +18,11 @@ struct Constant {
     }
     
     struct Keys {
-        static let googleAPIKey = "AIzaSyAlph4B70bK6CMTXqpSjoiYAoFMeVV7Bj4"
+        static let googleAPIKey = "GOOGLE_API_KEY"
     }
     
     struct Endpoint {
-        static let deliveries = "/deliveries"
+        static let deliveries = "ENDPOINT"
     }
     
     struct ViewControllerTitle {
@@ -47,7 +47,7 @@ struct Constant {
     
     // MARK: Stored Properties
     
-    static let baseURL = "https://mock-api-mobile.dev.lalamove.com"
+    static let baseURL = "BASE_URL"
     static var dataSource = DataSource.dataBase
     static let fontSize: CGFloat = 14
     static let errorIcon = UIImage(named: "error_icon")
