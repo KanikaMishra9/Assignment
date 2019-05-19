@@ -5,7 +5,9 @@ User can navigate to detail page of an item by selecting it in the list. Detail 
 
 
 # Screenshots
+![Simulator Screen Shot - iPhone 8 - 2019-05-17 at 00 13 02](https://user-images.githubusercontent.com/31096930/57983924-5c02e780-7a74-11e9-9926-2cde8972bbc4.png)
 
+![Simulator Screen Shot - iPhone 8 - 2019-05-17 at 00 13 09](https://user-images.githubusercontent.com/31096930/57983930-6624e600-7a74-11e9-9a8d-205e3c6ffff2.png)
 
 # Requirements
 
