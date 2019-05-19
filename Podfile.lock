@@ -1,0 +1,68 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - Fabric (1.9.0)
+  - GoogleMaps (3.1.0):
+    - GoogleMaps/Maps (= 3.1.0)
+  - GoogleMaps/Base (3.1.0)
+  - GoogleMaps/Maps (3.1.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.1.0):
+    - GoogleMaps/Base (= 3.1.0)
+  - OHHTTPStubs/Core (7.0.0)
+  - OHHTTPStubs/Default (7.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (7.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (7.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (7.0.0)
+  - OHHTTPStubs/Swift (7.0.0):
+    - OHHTTPStubs/Default
+  - SDWebImage (5.0.2):
+    - SDWebImage/Core (= 5.0.2)
+  - SDWebImage/Core (5.0.2)
+  - SwiftLint (0.32.0)
+  - SwiftyJSON (3.1.0)
+
+DEPENDENCIES:
+  - Alamofire (= 4.8.2)
+  - Crashlytics
+  - Fabric
+  - GoogleMaps (= 3.1.0)
+  - GooglePlaces (= 3.1.0)
+  - OHHTTPStubs/Swift (~> 7.0.0)
+  - SDWebImage (= 5.0.2)
+  - SwiftLint (= 0.32.0)
+  - SwiftyJSON (= 3.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Crashlytics
+    - Fabric
+    - GoogleMaps
+    - GooglePlaces
+    - OHHTTPStubs
+    - SDWebImage
+    - SwiftLint
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
+  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
+  GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
+  OHHTTPStubs: ef33a2c353110d306bb98f695435ec56ff5a26c3
+  SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
+  SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
+  SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
+
+PODFILE CHECKSUM: a2d3e8fc56e8da4d204b230b4d58abc92b5f51b1
+
+COCOAPODS: 1.6.1

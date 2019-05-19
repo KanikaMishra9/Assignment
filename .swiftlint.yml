@@ -1,0 +1,30 @@
+disabled_rules: # rule identifiers to exclude from running
+- trailing_whitespace
+- unused_closure_parameter
+- unused_optional_binding
+- force_cast
+- redundant_string_enum_value
+- overridden_super_call
+- line_length
+- identifier_name
+
+opt_in_rules: # some rules are only opt-in
+- empty_count
+- force_unwrapping
+- explicit_init
+- closure_spacing
+- overridden_super_call
+- redundant_nil_coalescing
+- nimble_operator
+- attributes
+- operator_usage_whitespace
+- closure_end_indentation
+- first_where
+- object_literal
+- number_separator
+- prohibited_super_call
+- fatal_error_message
+# Find all the available rules by running:
+# swiftlint rules
+excluded:
+- Pods
