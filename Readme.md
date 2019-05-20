@@ -88,7 +88,7 @@ Any changes can be made in .swiftlint.yml file, which is located in project root
 1. Data caching (SDWebImage, CoreData)
 2. Supports local storage using Core Data
 3. "Pull to Refresh" functionality
-4. It has paging feature for showing list of Delivery Products
+4. It has pagination feature.
 5. It Shows location of Delivery Location on Google Map.
 
 # Assumptions
