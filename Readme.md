@@ -83,6 +83,23 @@ Fabric Crashlytics has been already integrated in the application to get the cra
 It is tool to enforce Swift style and conventions. It is integrated using CocoaPod.
 Any changes can be made in .swiftlint.yml file, which is located in project root folder.
 
+# Features
+
+1. Data caching (SDWebImage, CoreData)
+2. Supports local storage using Core Data
+3. "Pull to Refresh" functionality
+4. It has paging feature for showing list of Delivery Products
+5. It Shows location of Delivery Location on Google Map.
+
+# Assumptions
+
+1. It is iPhone specific app and supports iPhone 5s or later devices
+2. It supports iOS version 10.x or later
+3. Device orientation is limited to portrait mode only.
+4. If any existing record will be updated on server then it will also be updated in local storage only after fetching the          
+   updated data from server
+
+
 # Screenshots
 ![Simulator Screen Shot - iPhone 8 - 2019-05-17 at 00 13 02](https://user-images.githubusercontent.com/31096930/57983924-5c02e780-7a74-11e9-9926-2cde8972bbc4.png)
 
@@ -93,7 +110,11 @@ Any changes can be made in .swiftlint.yml file, which is located in project root
 * Test cases cover the Core Data, API, View and ViewModel module.
 
 
-
+# Improvements
+1. UI test cases can be covered
+2. Localisation feature can be added
+3. Unit Test cases can be covered more.
+4. Detail View on marker tap can be customised. 
 
 
 
