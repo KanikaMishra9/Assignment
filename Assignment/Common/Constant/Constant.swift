@@ -22,7 +22,7 @@ struct Constant {
     }
     
     struct Endpoint {
-        static let deliveries = "ENDPOINT"
+        static let deliveries = "/deliveries"
     }
     
     struct ViewControllerTitle {
@@ -47,7 +47,7 @@ struct Constant {
     
     // MARK: Stored Properties
     
-    static let baseURL = "BASE_URL"
+    static let baseURL = "https://mock-api-mobile.dev.lalamove.com"
     static var dataSource = DataSource.dataBase
     static let fontSize: CGFloat = 14
     static let errorIcon = UIImage(named: "error_icon")

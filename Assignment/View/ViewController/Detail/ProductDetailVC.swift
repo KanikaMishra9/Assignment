@@ -46,6 +46,7 @@ class ProductDetailVC: UIViewController {
         deliveryDescription.translatesAutoresizingMaskIntoConstraints = false
         deliveryImageView.translatesAutoresizingMaskIntoConstraints = false
         deliveryImageView.contentMode = .scaleAspectFill
+        deliveryImageView.clipsToBounds = true
         deliveryDescription.isEditable = false
         deliveryView.setLeadingConstraint(secondView: view, constant: Constant.Dimension.spacing.rawValue )
         deliveryView.setTrailingConstraint(secondView: view, constant: -Constant.Dimension.spacing.rawValue)

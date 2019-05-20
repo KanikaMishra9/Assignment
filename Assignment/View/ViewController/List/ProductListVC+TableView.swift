@@ -21,7 +21,6 @@ extension ProductListVC: UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = .clear
         let product = productListViewModel.products[indexPath.row]
         let imgURL = URL(string: product.imageURL ?? "")
-//        cell.productImageView.sd_setImage(with: imgURL, completed: nil)
         cell.productImageView.sd_setImage(with: imgURL, placeholderImage: Constant.errorIcon, options: [], progress: nil, completed: nil)
         cell.descLabel.text = product.description
         return cell

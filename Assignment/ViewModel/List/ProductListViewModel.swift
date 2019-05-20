@@ -42,7 +42,6 @@ class ProductListViewModel {
         if isDataRefreshing == false {
             isDataRefreshing = true
             if Constant.dataSource == .dataBase {
-                print("DB CALL")
                 let productList = getProductListFromDB(offset: offset, limit: limit)
                 
                 if let productList = productList {
@@ -62,7 +61,6 @@ class ProductListViewModel {
     
     private func getProductListFromServer(offset: Int, limit: Int) {
         let parameters = [APIKeys.offsetKey.rawValue: offset, APIKeys.limitKey.rawValue: limit]
-        print("API CALL")
         guard ConnectivityManager.isConnectedToInternet() else {
             self.updateOnError(error: nil)
             return
