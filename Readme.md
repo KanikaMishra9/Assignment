@@ -3,12 +3,6 @@
 An iOS application which shows the list of items.  It uses CoreData Framework for storing the items offline. If application contains offline records then offline records will be shown otherwise API call will made to fetch the records from server.
 User can navigate to detail page of an item by selecting it in the list. Detail Page shows the details along with the delivery location on Google map.
 
-
-# Screenshots
-![Simulator Screen Shot - iPhone 8 - 2019-05-17 at 00 13 02](https://user-images.githubusercontent.com/31096930/57983924-5c02e780-7a74-11e9-9926-2cde8972bbc4.png)
-
-![Simulator Screen Shot - iPhone 8 - 2019-05-17 at 00 13 09](https://user-images.githubusercontent.com/31096930/57983930-6624e600-7a74-11e9-9a8d-205e3c6ffff2.png)
-
 # Requirements
 
 * Xcode 10.2, iOS 12.2 SDK or later, OS X 10.14 or later.
@@ -41,13 +35,13 @@ User can navigate to detail page of an item by selecting it in the list. Detail 
 
 MVVM
 
-* Model: Model is being used for storing the data returned from local storage and api. There are two models in project. 
-1. Product: It is for data storage, which we get from API and database. This modal is being used globally. 
-2. DeliveryProduct: It is a core data model. First we get the data from local storage in DeliveryProduct format then we convert it into the  
-model “Product” which is used globally.
+<img width="1060" alt="FlowChart" src="https://user-images.githubusercontent.com/31096930/58008732-aafb5c00-7b0a-11e9-80e5-5105df98fe92.png">
+
+
+* Model: Model is being used for storing the data returned from local storage and api. 
 Modal is interacting with two layers:
 1. CoreDataManager: It performs all database related operations and provides the required output to ViewModel.
-2. APIManager: It interacts with server and converts the received response into model and returns back to the ViewModel with model.
+2. APIManager: It interacts with server and returns back to the ViewModel with received JSON response.
 
 * View: View presents all user interface elements. The view layer interacts with ViewModel to get the data which is to be shown on UI.
 * ViewModel: This layer is the mediator between the View and Model, through which data flows from the Model to the View and vice versa. it contains all the business logic and inform the view through Delegation.   
@@ -91,10 +85,15 @@ Fabric Crashlytics has been already integrated in the application to get the cra
 It is tool to enforce Swift style and conventions. It is integrated using CocoaPod.
 Any changes can be made in .swiftlint.yml file, which is located in project root folder.
 
+# Screenshots
+![Simulator Screen Shot - iPhone 8 - 2019-05-17 at 00 13 02](https://user-images.githubusercontent.com/31096930/57983924-5c02e780-7a74-11e9-9926-2cde8972bbc4.png)
+
+![Simulator Screen Shot - iPhone 8 - 2019-05-17 at 00 13 09](https://user-images.githubusercontent.com/31096930/57983930-6624e600-7a74-11e9-9a8d-205e3c6ffff2.png)
 
 # Unit Testing
 * Unit Test cases are written using XCTestCase
 * Test cases cover the Core Data, API, View and ViewModel module.
+
 
 
 
