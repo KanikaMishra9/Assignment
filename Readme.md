@@ -32,7 +32,8 @@ User can navigate to detail page of an item by selecting it in the list. Detail 
 
 MVVM
 
-<img width="1060" alt="FlowChart" src="https://user-images.githubusercontent.com/31096930/58008732-aafb5c00-7b0a-11e9-80e5-5105df98fe92.png">
+<img width="1060" alt="FlowChart" src="https://user-images.githubusercontent.com/31096930/58014904-91144600-7b17-11e9-846d-4390e856101b.png">
+
 
 
 * Model: Model is being used for storing the data returned from local storage and api. 
