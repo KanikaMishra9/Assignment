@@ -8,7 +8,6 @@ User can navigate to detail page of an item by selecting it in the list. Detail 
 * Xcode 10.2, iOS 12.2 SDK or later, OS X 10.14 or later.
 * A Google API Key.
 * A Fabric account for crashlytics and Fabric API Key.
-* A URL which will get you the data from server.
 
 
 # Installation
@@ -16,8 +15,6 @@ User can navigate to detail page of an item by selecting it in the list. Detail 
 - Clone the repository to your local machine
 - Run pod install in your terminal from inside the cloned repository's working directory.  
 - Replace your Google API Key in constant file with "GOOGLE_API_KEY"
-- Replace your url in constant file with "BASE_URL"
-- Replace your endpoint in constant file with "ENDPOINT"
 - Replace Your Fabric API Key in info.plist with "FABRIC_API_KEY"(if you want to use crashlytics)
 
 
