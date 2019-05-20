@@ -28,7 +28,6 @@ struct Constant {
     struct ViewControllerTitle {
         static let listVCTitle = "Things to Deliver"
         static let detailVCTitle = "Delivery Details"
-        
     }
     
     // MARK: Enum
