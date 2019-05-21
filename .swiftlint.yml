@@ -8,6 +8,7 @@ disabled_rules: # rule identifiers to exclude from running
 - line_length
 - identifier_name
 - object_literal
+- weak_delegate
 
 opt_in_rules: # some rules are only opt-in
 - empty_count

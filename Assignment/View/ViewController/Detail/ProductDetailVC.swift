@@ -67,6 +67,7 @@ class ProductDetailVC: UIViewController {
     
     func showProductdetail() {
         if let detailViewModel = detailViewModel {
+            mapView.clear()
             let camera = GMSCameraPosition.camera(withLatitude: detailViewModel.product.location?.lattitude ?? 0, longitude: detailViewModel.product.location?.longitude ?? 0, zoom: zoomLevel)
             mapView.camera = camera
             let marker = GMSMarker()
@@ -78,7 +79,7 @@ class ProductDetailVC: UIViewController {
             deliveryImageView.sd_setImage(with: imgURL, placeholderImage: Constant.errorIcon, options: [], progress: nil, completed: nil)
 
             if let address = detailViewModel.product.location?.address {
-                deliveryDescription.text = detailViewModel.product.description ?? "" + address
+                deliveryDescription.text = "\(detailViewModel.product.description ?? "") at \(address)"
                 
             } else {
                 deliveryDescription.text = detailViewModel.product.description
@@ -91,6 +92,7 @@ class ProductDetailVC: UIViewController {
             } else {
                 deliveryView.setHeight(constant: textViewHeight)
             }
+            
         }
     }
     

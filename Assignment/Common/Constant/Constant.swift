@@ -61,6 +61,6 @@ struct Constant {
     static let fontSize: CGFloat = 14
     static let errorIcon = UIImage(named: "error_icon")
     static let errorTitle = "Error"
-
+    static let alertTitle = "Ok"
 
 }

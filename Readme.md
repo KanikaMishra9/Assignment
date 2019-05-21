@@ -97,7 +97,7 @@ Any changes can be made in .swiftlint.yml file, which is located in project root
 2. It supports iOS version 10.x or later
 3. Device orientation is limited to portrait mode only.
 4. If any existing record will be updated on server then it will also be updated in local storage only after fetching the          
-   updated data from server
+updated data from server
 
 
 # Screenshots
