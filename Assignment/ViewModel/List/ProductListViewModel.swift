@@ -35,7 +35,7 @@ class ProductListViewModel {
     var offset = 0
     var limit = 20
     var apiManager: APIManagerProtocol = APIManager()
-    var coreDataManagder: CoreDataManagerProtocol = CoreDataManager()
+    var coreDataManager: CoreDataManagerProtocol = CoreDataManager()
     var isDataRefreshing = false
     
     func getProductList() {
@@ -131,7 +131,7 @@ class ProductListViewModel {
     }
     
     private func getProductListFromDB(offset: Int, limit: Int) -> [Product]? {
-        let productList = coreDataManagder.fetchProducts(offset: offset, limit: limit)
+        let productList = coreDataManager.fetchProducts(offset: offset, limit: limit)
         if let productList = productList {
             return productList
         }
@@ -139,7 +139,7 @@ class ProductListViewModel {
     }
     
     private func saveProductsIntoDB(products: [Product]) {
-        coreDataManagder.insertProducts(products: products)
+        coreDataManager.insertProducts(products: products)
     }
     
 }

@@ -22,7 +22,12 @@ extension ProductListVC: UITableViewDelegate, UITableViewDataSource {
         let product = productListViewModel.products[indexPath.row]
         let imgURL = URL(string: product.imageURL ?? "")
         cell.productImageView.sd_setImage(with: imgURL, placeholderImage: Constant.errorIcon, options: [], progress: nil, completed: nil)
-        cell.descLabel.text = product.description
+        if let address = product.location?.address {
+            cell.descLabel.text = product.description ?? "" + address
+
+        } else {
+            cell.descLabel.text = product.description
+        }
         return cell
     }
     
@@ -45,3 +50,4 @@ extension ProductListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+

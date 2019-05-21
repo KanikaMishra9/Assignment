@@ -77,7 +77,12 @@ class ProductDetailVC: UIViewController {
             let imgURL = URL(string: detailViewModel.product.imageURL ?? "")
             deliveryImageView.sd_setImage(with: imgURL, placeholderImage: Constant.errorIcon, options: [], progress: nil, completed: nil)
 
-            deliveryDescription.text = detailViewModel.product.description
+            if let address = detailViewModel.product.location?.address {
+                deliveryDescription.text = detailViewModel.product.description ?? "" + address
+                
+            } else {
+                deliveryDescription.text = detailViewModel.product.description
+            }
             let textViewHeight = deliveryDescription.contentSize.height
             if textViewHeight > view.bounds.height / 2 {
                 deliveryView.setHeight(constant: view.bounds.height / 2)

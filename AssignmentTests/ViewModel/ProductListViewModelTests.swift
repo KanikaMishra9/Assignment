@@ -15,17 +15,22 @@ class ProductListViewModelTests: XCTestCase {
     let viewModel = ProductListViewModel()
     var coreDataManagerTest: CoreDataManagerTest!
     var apiManagerTest: APIManagerTest!
+    var viewModelDelegate: ProductListViewModelTest!
     
     override func setUp() {
         coreDataManagerTest = CoreDataManagerTest()
         apiManagerTest = APIManagerTest()
         viewModel.coreDataManagder = coreDataManagerTest
         viewModel.apiManager = apiManagerTest
+        viewModelDelegate = ProductListViewModelTest()
+        viewModel.delegate = viewModelDelegate
     }
     
     override func tearDown() {
         coreDataManagerTest = nil
         apiManagerTest = nil
+        viewModelDelegate = nil
+        
     }
     
     func testGetProductListWithValidCount() {
@@ -97,6 +102,31 @@ class APIManagerTest: APIManagerProtocol {
                 completionHandler(nil, nil)
             }
         }
+    }
+    
+}
+
+class ProductListViewModelTest: ProductListViewModelDelegate {
+   
+    func refreshData() {
+    }
+    
+    func errorOccured(errorMessage: String) {
+    }
+    
+    func showMiddleLoader() {
+    }
+    
+    func showBottomLoader() {
+    }
+    
+    func hideTopLoader() {
+    }
+    
+    func hideMiddleLoader() {
+    }
+    
+    func hideBottomLoader() {
     }
     
 }
