@@ -38,9 +38,8 @@ MVVM
 
 * Model: Model is being used for storing the data returned from local storage and api. 
   Modal is interacting with two layers:
-  
-       1. CoreDataManager: It performs all database related operations and provides the required output to ViewModel.
-       2. APIManager: It interacts with server and returns back to the ViewModel with received JSON response.
+    1. CoreDataManager: It performs all database related operations and provides the required output to ViewModel.
+    2. APIManager: It interacts with server and returns back to the ViewModel with received JSON response.
 
 * View: View presents all user interface elements. The view layer interacts with ViewModel to get the data which is to be shown on UI.
 * ViewModel: This layer is the mediator between the View and Model, through which data flows from the Model to the View and vice versa. it contains all the business logic and inform the view through Delegation.   
