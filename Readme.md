@@ -13,7 +13,7 @@ User can navigate to detail page of an item by selecting it in the list. Detail 
 # Installation
 
 - Clone the repository to your local machine
-- Run pod install in your terminal from inside the cloned repository's working directory.  
+- Run pod install in your terminal(open terminal -> set path to your repository's directory -> run pod install)
 - Replace your Google API Key in constant file with "GOOGLE_API_KEY"
 - Replace Your Fabric API Key in info.plist with "FABRIC_API_KEY"(if you want to use crashlytics)
 
