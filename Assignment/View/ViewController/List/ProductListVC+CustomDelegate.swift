@@ -20,7 +20,7 @@ extension ProductListVC: ProductListViewModelDelegate {
     }
     
     func errorOccured(errorMessage: String) {
-        showAlert(title: errorTitle, message: errorMessage)
+        showAlert(title: Constant.errorTitle, message: errorMessage)
     }
     
     func refreshData() {

@@ -25,11 +25,6 @@ class ProductListViewModel {
         case limitKey = "limit"
     }
     
-    enum ErrorMessege: String {
-        case internetError = "Please check your internet connection!"
-        case other = "Something went wrong."
-    }
-    
     var products = [Product]()
     weak var delegate: ProductListViewModelDelegate?
     var offset = 0
@@ -43,7 +38,6 @@ class ProductListViewModel {
             isDataRefreshing = true
             if Constant.dataSource == .dataBase {
                 let productList = getProductListFromDB(offset: offset, limit: limit)
-                
                 if let productList = productList {
                     products += productList
                     offset = products.count
@@ -86,7 +80,7 @@ class ProductListViewModel {
                     self.saveDataFromServer(products: productList.productList)
                 }
             } catch {
-                self.delegate?.errorOccured(errorMessage: ErrorMessege.other.rawValue)
+                self.delegate?.errorOccured(errorMessage: Constant.ErrorMessege.other.rawValue)
             }
         }
     }
@@ -126,7 +120,7 @@ class ProductListViewModel {
         if let error = error {
             delegate?.errorOccured(errorMessage: error.localizedDescription)
         } else {
-            delegate?.errorOccured(errorMessage: ErrorMessege.internetError.rawValue)
+            delegate?.errorOccured(errorMessage: Constant.ErrorMessege.internetError.rawValue)
         }
     }
     

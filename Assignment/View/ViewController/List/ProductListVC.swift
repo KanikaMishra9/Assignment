@@ -10,16 +10,10 @@ import UIKit
 
 class ProductListVC: UIViewController {
     
-    enum RefreshStatusMessege: String {
-        case started = "refreshing..."
-        case ended = "pull to refresh..."
-    }
-    
     var listTableView = UITableView()
     let productListViewModel = ProductListViewModel()
     let refreshControl = UIRefreshControl()
     let activityIndicator = UIActivityIndicatorView(style: .gray)
-    let errorTitle = "Error"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +46,7 @@ class ProductListVC: UIViewController {
     }
     
     func addRefreshControl() {
-        refreshControl.attributedTitle = NSAttributedString(string: RefreshStatusMessege.started.rawValue)
+        refreshControl.attributedTitle = NSAttributedString(string: Constant.RefreshStatusMessege.started.rawValue)
         refreshControl.addTarget(self, action: #selector(refreshList), for: .valueChanged)
         listTableView.addSubview(refreshControl)
     }
@@ -64,7 +58,7 @@ class ProductListVC: UIViewController {
     
     func endRefreshing() {
         refreshControl.endRefreshing()
-        refreshControl.attributedTitle = NSAttributedString(string: RefreshStatusMessege.ended.rawValue)
+        refreshControl.attributedTitle = NSAttributedString(string: Constant.RefreshStatusMessege.ended.rawValue)
     }
     
     func showTableViewBottomLoader() {

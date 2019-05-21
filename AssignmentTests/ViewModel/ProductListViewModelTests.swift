@@ -20,7 +20,7 @@ class ProductListViewModelTests: XCTestCase {
     override func setUp() {
         coreDataManagerTest = CoreDataManagerTest()
         apiManagerTest = APIManagerTest()
-        viewModel.coreDataManagder = coreDataManagerTest
+        viewModel.coreDataManager = coreDataManagerTest
         viewModel.apiManager = apiManagerTest
         viewModelDelegate = ProductListViewModelTest()
         viewModel.delegate = viewModelDelegate
@@ -30,7 +30,6 @@ class ProductListViewModelTests: XCTestCase {
         coreDataManagerTest = nil
         apiManagerTest = nil
         viewModelDelegate = nil
-        
     }
     
     func testGetProductListWithValidCount() {
@@ -63,7 +62,9 @@ class ProductListViewModelTests: XCTestCase {
 }
 
 class CoreDataManagerTest: CoreDataManagerProtocol {
+    
     var isEmptyResponse: Bool = false
+    
     func insertProducts(products: [Product]) {
         
     }
@@ -80,6 +81,7 @@ class CoreDataManagerTest: CoreDataManagerProtocol {
         let aRecord = Product(id: 0, address: "Mock Address", detail: "Mock Description", lattitude: 22.334, longitude: 123.39, imageURL: "Mock Url")
         return aRecord
     }
+    
 }
 
 class APIManagerTest: APIManagerProtocol {
@@ -107,7 +109,7 @@ class APIManagerTest: APIManagerProtocol {
 }
 
 class ProductListViewModelTest: ProductListViewModelDelegate {
-   
+    
     func refreshData() {
     }
     

@@ -44,11 +44,23 @@ struct Constant {
         case dataBase, server
     }
     
+    enum ErrorMessege: String {
+        case internetError = "Please check your internet connection!"
+        case other = "Something went wrong."
+    }
+    
+    enum RefreshStatusMessege: String {
+        case started = "refreshing..."
+        case ended = "pull to refresh..."
+    }
+    
     // MARK: Stored Properties
     
     static let baseURL = "https://mock-api-mobile.dev.lalamove.com"
     static var dataSource = DataSource.dataBase
     static let fontSize: CGFloat = 14
     static let errorIcon = UIImage(named: "error_icon")
+    static let errorTitle = "Error"
+
 
 }

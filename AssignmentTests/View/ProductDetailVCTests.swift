@@ -10,6 +10,7 @@ import XCTest
 @testable import Assignment
 
 class ProductDetailVCTests: XCTestCase {
+    
     let productDetailVC = ProductDetailVC()
     var detailViewModelTest: ProductDetailViewModel!
     
@@ -32,4 +33,5 @@ class ProductDetailVCTests: XCTestCase {
         productDetailVC.deliveryViewSetup()
         XCTAssertNotNil(productDetailVC.deliveryView)
     }
+    
 }
