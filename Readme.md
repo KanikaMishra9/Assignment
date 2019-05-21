@@ -16,6 +16,13 @@ User can navigate to detail page of an item by selecting it in the list. Detail 
 - Run pod install in your terminal(open terminal -> set path to your repository's directory -> run pod install)
 - Replace your Google API Key in constant file with "GOOGLE_API_KEY"
 - Replace Your Fabric API Key in info.plist with "FABRIC_API_KEY"(if you want to use crashlytics)
+- If you are getting issues with code then follow these steps:
+
+    1. Use pod deintegrate
+    2. Delete all pod remains files - Podfile.lock, Pods, <Project>.xcworkspace
+    3. open <Project>.xcodeproj
+    4. Remove Pods project on left side
+    5. Try pod install
 
 
 # Support Version
@@ -32,7 +39,7 @@ User can navigate to detail page of an item by selecting it in the list. Detail 
 
 MVVM
 
-<img width="1060" alt="FlowChart" src="https://user-images.githubusercontent.com/31096930/58014904-91144600-7b17-11e9-846d-4390e856101b.png">
+<img width="1031" alt="Screenshot 2019-05-21 at 7 21 15 PM" src="https://user-images.githubusercontent.com/31096930/58101673-b0859e80-7bfd-11e9-93e6-89cbc03bb1e7.png">
 
 
 
